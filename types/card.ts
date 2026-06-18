@@ -4,5 +4,4 @@ export interface ReflectionCard {
   message: string
   lesson: string
   question: string
-  sweetWords: string
 }
