@@ -5,6 +5,7 @@ import { Circle, Waves } from "lucide-react"
 
 export function Header() {
   const [showImage, setShowImage] = useState(true)
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ""
 
   return (
     <header className="mx-auto flex w-full max-w-7xl flex-col gap-10 px-5 pb-8 pt-6 sm:px-8 lg:px-10 lg:pb-12">
@@ -41,7 +42,7 @@ export function Header() {
             {showImage ? (
               <img
                 // Replace this file at public/pearling-image.jpg to update the founder visual.
-                src="/pearling-image.jpg"
+                src={`${basePath}/pearling-image.jpg`}
                 alt="Pearling portrait"
                 className="h-full w-full object-cover grayscale-[0.25] contrast-[0.98] saturate-[0.92]"
                 onError={() => setShowImage(false)}
