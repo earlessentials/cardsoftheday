@@ -1,12 +1,6 @@
-"use client"
-
-import { useState } from "react"
 import { Circle, Waves } from "lucide-react"
 
 export function Header() {
-  const [showImage, setShowImage] = useState(true)
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ""
-
   return (
     <header className="mx-auto flex w-full max-w-7xl flex-col gap-10 px-5 pb-8 pt-6 sm:px-8 lg:px-10 lg:pb-12">
       <nav className="flex items-center justify-between text-sm text-pearl-ink/70">
@@ -37,29 +31,22 @@ export function Header() {
           </p>
         </div>
 
-        <aside className="pearl-frame shadow-pearl mx-auto w-full max-w-[270px] overflow-hidden rounded-[28px] p-3 sm:max-w-[320px] lg:mx-0 lg:max-w-none">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-[22px] bg-white/60">
-            {showImage ? (
-              <img
-                // Replace this file at public/pearling-image.jpg to update the founder visual.
-                src={`${basePath}/pearling-image.jpg`}
-                alt="Pearling portrait"
-                className="h-full w-full object-cover grayscale-[0.25] contrast-[0.98] saturate-[0.92]"
-                onError={() => setShowImage(false)}
-              />
-            ) : (
-              <div className="flex h-full flex-col items-center justify-center gap-4 bg-[radial-gradient(circle_at_42%_22%,rgba(255,255,255,0.9),transparent_28%),linear-gradient(145deg,#fffaf4,#ead7cb_48%,#dbe7e4)] px-8 text-center">
-                <Circle className="h-12 w-12 fill-white/80 text-pearl-champagne" />
-                <div>
-                  <p className="font-serif text-3xl text-pearl-ink">
-                    Created by Pearling
-                  </p>
-                  <p className="mt-3 text-sm leading-6 text-pearl-ink/62">
-                    A soft visual signature belongs here.
-                  </p>
-                </div>
+        <aside
+          className="pearl-frame shadow-pearl mx-auto w-full max-w-[270px] overflow-hidden rounded-[28px] p-3 sm:max-w-[320px] lg:mx-0 lg:max-w-none"
+          aria-label="Created by Pearling"
+        >
+          <div className="black-cat-scene relative aspect-[4/5] overflow-hidden rounded-[22px]">
+            <div className="black-cat-portrait" aria-hidden="true">
+              <div className="black-cat-tail" />
+              <div className="black-cat-body" />
+              <div className="black-cat-head">
+                <div className="black-cat-ear black-cat-ear-left" />
+                <div className="black-cat-ear black-cat-ear-right" />
+                <div className="black-cat-eye black-cat-eye-left" />
+                <div className="black-cat-eye black-cat-eye-right" />
               </div>
-            )}
+              <div className="black-cat-shadow" />
+            </div>
             <div className="absolute inset-x-4 bottom-4 rounded-2xl border border-white/70 bg-white/84 px-3 py-3 text-center shadow-card backdrop-blur sm:px-4">
               <p className="whitespace-nowrap text-[10px] uppercase tracking-[0.12em] text-pearl-ink/72 sm:text-xs sm:tracking-[0.18em]">
                 Created by Pearling
