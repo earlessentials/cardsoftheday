@@ -2,7 +2,7 @@
 
 A polished pearl-themed daily reflection card experience built with Next.js, React, TypeScript, Tailwind CSS, and Framer Motion.
 
-Visitors receive 8 softly shuffled cards from an 88-card local database and choose 1 card for the day. Each revealed card includes a warm message, a grounded lesson with an in-text citation, a reflective question, and sweet closing words.
+Visitors receive 8 softly shuffled cards from an 88-card local database and choose 1 card for the day. Each revealed card includes a warm message, a grounded lesson with an in-text citation, and a reflective question.
 
 ## Tech Stack
 
@@ -103,8 +103,7 @@ Each card follows this shape:
   title: "The Quiet Return",
   message: "Empowering message text",
   lesson: "Insightful lesson with citation (Bandura, 1997).",
-  question: "Reflective question?",
-  sweetWords: "Sweet closing line."
+  question: "Reflective question?"
 }
 ```
 
@@ -116,15 +115,16 @@ The current citation set is documented in:
 CITATION_SOURCES.md
 ```
 
-## Replace the Pearling Image
+## Update the Pearling Visual
 
-Replace this file:
+The landing page visual is a code-drawn black cat in:
 
 ```text
-public/pearling-image.jpg
+components/Header.tsx
+app/globals.css
 ```
 
-The landing page already uses that path. If the image is missing, the app shows a soft placeholder.
+Update those files to change the visual signature.
 
 ## Customize Colors and Typography
 
@@ -146,7 +146,7 @@ The visual system uses soft cream, champagne, warm white, blush beige, moonlit s
 ## Main Files
 
 - `app/page.tsx` renders the page
-- `components/Header.tsx` renders the title and Pearling image
+- `components/Header.tsx` renders the title and Pearling visual
 - `components/CardGrid.tsx` selects 8 random cards
 - `components/CardItem.tsx` renders each face-down card
 - `components/RevealedCard.tsx` renders the selected reflection
