@@ -46,11 +46,8 @@ export function CardItem({
       >
         <div className="card-face card-back-pattern absolute inset-0 overflow-hidden rounded-[28px] border border-white/75 shadow-card transition duration-300 group-hover:shadow-pearl">
           <div className="absolute inset-0 bg-[linear-gradient(115deg,transparent_18%,rgba(255,255,255,0.72)_46%,transparent_70%)] opacity-0 transition duration-500 group-hover:translate-x-8 group-hover:opacity-80" />
-          <div className="absolute inset-5 z-10 flex flex-col items-center justify-between rounded-[22px] border border-white/60 px-4 py-5">
-            <span className="text-xs uppercase tracking-[0.24em] text-pearl-ink/54">
-              Pearling
-            </span>
-            <Circle className="h-14 w-14 fill-white/78 text-pearl-champagne drop-shadow-sm" />
+          <div className="absolute inset-5 z-10 flex flex-col items-center justify-center gap-5 rounded-[22px] border border-white/60 px-4 py-5">
+            <Circle className="h-16 w-16 fill-white/78 text-pearl-champagne drop-shadow-sm" />
             <span className="text-xs uppercase tracking-[0.24em] text-pearl-ink/54">
               Card {index + 1}
             </span>
