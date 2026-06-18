@@ -9,6 +9,58 @@ import { RevealedCard } from "@/components/RevealedCard"
 
 const CARD_COUNT = 8
 
+function cleanCardCopy(card: ReflectionCard): ReflectionCard {
+  switch (card.id) {
+    case 14:
+      return {
+        ...card,
+        question: "What would you approach as gentle practice today?"
+      }
+    case 29:
+      return {
+        ...card,
+        lesson:
+          "Self-determination theory suggests that autonomy supports motivation when actions feel personally endorsed and aligned with chosen values (Deci and Ryan, 2000)."
+      }
+    case 52:
+      return {
+        ...card,
+        message:
+          "You are allowed to approach a task with curiosity and a little more ease."
+      }
+    case 53:
+      return {
+        ...card,
+        question: "What question would open the moment with more room?"
+      }
+    case 66:
+      return {
+        ...card,
+        message:
+          "You are allowed to build stamina through care, pacing, and steady attention."
+      }
+    case 79:
+      return {
+        ...card,
+        message: "You are allowed to treat your energy as a useful signal."
+      }
+    case 82:
+      return {
+        ...card,
+        message:
+          "You can pour your attention into one cup and let the table feel clearer."
+      }
+    case 84:
+      return {
+        ...card,
+        message:
+          "You can turn feedback into a learning loop with a next step."
+      }
+    default:
+      return card
+  }
+}
+
 function selectRandomCards() {
   const pool = [...cards]
 
@@ -19,7 +71,7 @@ function selectRandomCards() {
     pool[randomIndex] = current
   }
 
-  return pool.slice(0, CARD_COUNT)
+  return pool.slice(0, CARD_COUNT).map(cleanCardCopy)
 }
 
 export function CardGrid() {
