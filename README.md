@@ -59,6 +59,26 @@ git commit -m "Initial Cards of the Day app"
 git push -u origin main
 ```
 
+The repository includes a GitHub Pages workflow at:
+
+```text
+.github/workflows/deploy-pages.yml
+```
+
+After the workflow runs on `main`, the static site is published at:
+
+```text
+https://YOUR-USERNAME.github.io/cardsoftheday/
+```
+
+For this project, the expected GitHub Pages URL is:
+
+```text
+https://earlessentials.github.io/cardsoftheday/
+```
+
+If Pages is not active yet, open the repository settings, choose Pages, and set the source to GitHub Actions.
+
 ## Deploy Through Vercel
 
 1. Go to [Vercel](https://vercel.com).
