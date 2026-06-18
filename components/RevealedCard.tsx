@@ -25,9 +25,6 @@ function formatReflection(card: ReflectionCard) {
     "Reflective Question:",
     card.question,
     "",
-    "Sweet Words:",
-    card.sweetWords,
-    "",
     "Take what feels useful. Leave what does not."
   ].join("\n")
 }
@@ -138,13 +135,6 @@ export function RevealedCard({ card, onChooseAgain }: RevealedCardProps) {
                 <p className="mt-2 font-serif text-2xl leading-9 text-pearl-ink">
                   {card.question}
                 </p>
-              </section>
-
-              <section>
-                <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-pearl-mauve">
-                  Sweet Words
-                </h3>
-                <p className="mt-2 text-lg leading-8">{card.sweetWords}</p>
               </section>
             </div>
 
